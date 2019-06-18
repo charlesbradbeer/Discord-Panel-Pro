@@ -1,0 +1,42 @@
+*   Trying 104.16.59.5...
+* TCP_NODELAY set
+* Connected to discordapp.com (104.16.59.5) port 443 (#0)
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* successfully set certificate verify locations:
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: none
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server accepted to use h2
+* Server certificate:
+*  subject: OU=Domain Control Validated; OU=PositiveSSL; CN=discordapp.com
+*  start date: Feb 24 00:00:00 2017 GMT
+*  expire date: Mar 11 23:59:59 2020 GMT
+*  subjectAltName: host "discordapp.com" matched cert's "discordapp.com"
+*  issuer: C=GB; ST=Greater Manchester; L=Salford; O=COMODO CA Limited; CN=COMODO RSA Domain Validation Secure Server CA
+*  SSL certificate verify ok.
+* Using HTTP2, server supports multi-use
+* Connection state changed (HTTP/2 confirmed)
+* Copying HTTP/2 data in stream buffer to connection buffer after upgrade: len=0
+* Using Stream ID: 1 (easy handle 0x2cb5020)
+> GET /api/guilds/483244005065490442/widget.json HTTP/2
+Host: discordapp.com
+Accept: */*
+Authorization: Bot NTI4MzI0MjA3NzI2MTY2MDE2.DwgoMw.BYm9wro61DnUkeZVht7ZdgTgfJk
+
+* Connection state changed (MAX_CONCURRENT_STREAMS == 256)!
+< HTTP/2 403 
+< date: Tue, 01 Jan 2019 22:51:53 GMT
+< content-type: application/json
+< content-length: 45
+< set-cookie: __cfduid=d52f7f26540730e7dcdd3081aae46dacd1546383113; expires=Wed, 01-Jan-20 22:51:53 GMT; path=/; domain=.discordapp.com; HttpOnly
+< strict-transport-security: max-age=31536000; includeSubDomains
+< via: 1.1 google
+< alt-svc: clear
+< cf-cache-status: EXPIRED
+< expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< server: cloudflare
+< cf-ray: 49288d9b5ae26b6d-LHR
+< 
+* Connection #0 to host discordapp.com left intact

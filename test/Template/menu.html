@@ -1,0 +1,75 @@
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<span id="op">Demo</span>
+  <div id='cntnr'>
+    <ul id='items'>
+      <li>Copyretetetet</li>
+      <li>Paste</li>
+      <li>Delete</li>  
+    </ul>
+    <hr />
+    <ul id="items">
+      <li>Lock selection</li>
+    </ul>
+    <hr />
+    <ul id='items'>
+      <li>Send to Back</li>
+      <li>Bring to Front</li>  
+    </ul>
+  </div>
+<style>
+#items{
+  list-style:none;
+  margin:0px;
+  margin-top:4px;
+  padding-left:10px;
+  padding-right:10px;
+  padding-bottom:3px;
+  font-size:17px;
+  color: #333333;
+  
+}
+hr { width: 85%; 
+  background-color:#E4E4E4;
+  border-color:#E4E4E4;
+    color:#E4E4E4;
+}
+#cntnr{
+  display:none;
+  position:fixed;
+  border:1px solid #B2B2B2;
+  width:150px;      background:#F9F9F9;
+  box-shadow: 3px 3px 2px #E9E9E9;
+  border-radius:4px;
+}
+
+li{
+  
+  padding: 3px;
+  padding-left:10px;
+}
+
+
+#items :hover{
+   color: white;
+  background:#284570;
+  border-radius:2px;
+}
+</style>
+
+<script>
+$(document).bind("contextmenu",function(e){
+  e.preventDefault();
+  console.log(e.pageX + "," + e.pageY);
+  $("#cntnr").css("left",e.pageX);
+  $("#cntnr").css("top",e.pageY);
+ // $("#cntnr").hide(100);        
+  $("#cntnr").fadeIn(200,startFocusOut());      
+});
+
+function startFocusOut(){
+  $(document).on("click",function(){
+  $("#cntnr").hide();        
+  $(document).off("click");
+  });
+}
+</script>
